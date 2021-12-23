@@ -15,9 +15,9 @@ let displayCount = document.getElementById("counter")
 
 function save(){ 
 
-    let first = count + "-"
+    let first = count + " - "
 
-    displayCount.innerText += first
+    displayCount.textContent += first
 
     count = 0 
 
@@ -25,6 +25,10 @@ function save(){
 
 
 }
+
+ 
+ 
+ 
 
 
 
