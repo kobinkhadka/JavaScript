@@ -11,8 +11,16 @@ let isAlive = false;
 let messageEl = document.getElementById("message-el")
 let showSum = document.getElementById("total")
 let showCard = document.getElementById("card")
+let showPlayerInfo = document.getElementById('player')
 
-0
+
+
+let player = { 
+    name: "Kobin", 
+    chips: 500
+}
+
+
 
 //Start game: 
 // startGame() just call the rendergame() function each time start game button is pressed
@@ -26,11 +34,12 @@ function startGame() {
     
     cards = [firstCard, secondCard]
 
-
-
     sum =  firstCard + secondCard
 
+    showPlayerInfo.textContent = player.name + ": " + "$" + player.chips
 
+
+    player.chips -= 10
     renderGame()
 }
 
@@ -49,7 +58,6 @@ function renderGame(){
     //show card  in element with id = card
 
     showCard.textContent = "Cards: "
-
 
 
     // Show cards in hand
@@ -96,6 +104,10 @@ function newCard() {
         sum += newCard
 
         cards.push(newCard)
+
+        
+
+
 
         renderGame()
 
